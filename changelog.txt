@@ -1,0 +1,766 @@
+====================
+     04-16-2016
+====================
+
+
+   * build/
+d2d72ac build: Create a oem image when BOARD_OEMIMAGE_FILE_SYSTEM_TYPE is defined
+
+   * external/wpa_supplicant_8/
+9fda75c wpa_supplicant_conf: Let devices provide their own template
+
+   * frameworks/av/
+489c9fb audiopolicy: Update legacy policy for session callbacks
+c38d4f2 frameworks/av: Fix video recording breaks
+
+   * packages/apps/Dialer/
+51bfbbe Expand clickable area of settings button
+f683c62 Search: Only clear focus if we are showing a coachmark
+4ece597 [1/2] Use UICommon simple SnackBar
+d74d5ba Workaround for AOSP strings missing translations
+
+   * packages/apps/InCallUI/
+496e191 [2/2] Use UICommon simple SnackBar
+
+   * packages/apps/Messaging/
+d9a5a83 Messaging: Fix broken and untested features.
+
+   * vendor/aicp/
+3ebae84 Irancell & MTS APN updates
+825028e cm: Amend api text message.
+
+   * vendor/cmsdk/
+94e1db7 CmSdk : Add deprecated THIRD_PARTY_KEYGUARD permission
+76ae7d4 livedisplay: Update system-api
+
+====================
+     04-15-2016
+====================
+
+
+   * device/wileyfox/crackling/
+82fae7e crackling: Remove deprecated power mode nodes
+6aa30b7 Remove density from PRODUCT_AAPT_CONFIG
+fc83513 crackling: Format /cache during boot if unformatted
+bacf696 crackling: Enable secure discard
+7a2b06e remove persist.sys.usb.config override
+
+   * frameworks/base/
+68c5761 systemui: Remove LiveDisplay tile
+124ea92 LockPatternUtils: Use the actual user id to set pattern size
+c9cb448 LockSettingsStorage: migrate user pattern size to correct userid
+3c9c4bd LockSettingsStorage: fallback to cm legacy gesture file
+f87140c5 SettingsProvider: move SYSTEM_PROFILES_ENABLED to CMSettings
+d5fb715 Lockscreen : Update shortcuts in onAttachWindow
+ce7cb96 Lockscreen : Ensure we hide bottom area in bouncer
+
+   * frameworks/opt/hardware/
+35568c6 cmhw: Move DisplayColorCalibration from hardware/cyanogen to here
+
+   * hardware/cyanogen/
+240b860 cmhw: Remove DisplayColorCalibration from hardware/cyanogen
+
+   * packages/apps/Contacts/
+affff68 [2/2] Add new method for determining whether to show block option
+dd2acf1 Make Block action contingent on system-wide Blacklist setting
+e4b31b7 Fix camel case
+
+   * packages/apps/ContactsCommon/
+0e6d8d4 [1/2] Add new method for determining whether to show block option
+5fdfde4 Improve strings
+
+   * packages/apps/PhoneCommon/
+a495381 Set untranslatables
+
+   * packages/apps/Settings/
+6abc9ef Settings: use the actual user id to set pattern size
+f9eb88d settings: Updated RU translations by Sergey Samsonenko
+7aa468b Setting: Disable WPS Push Button/Pin Entry when WiFi is disabled
+
+   * packages/apps/SetupWizard/
+d99c459 SetupWizard: Don't reprompt setup if account already exists.
+
+   * packages/apps/Trebuchet/
+c14b404 Trebuchet: Always cancel any pending dim animations
+
+   * packages/providers/ThemesProvider/
+9063435 New icon
+b5f8923 Update controls preview to properly render themed assets.
+
+   * prebuilts/cmsdk/
+dd1bd68 prebuilts/cmsdk: Prep for api 5.0 release artifact.
+
+   * system/bt/
+bdcf617 bt-vendor: Fix sporadic crashes on shutdown
+
+   * system/core/
+eef3200 healthd: Rename default QCOM libhealthd library
+
+   * system/vold/
+e6339d3 cryptfs: Fix OTA from cm<=12 for encrypted patterns > 9
+
+   * vendor/aicp/
+5504cfd Update APN name for Movistar INTERNET
+7e2b830 Merge "APN: fixup single-digit mnc APNs" into mm6.0
+dd452aa deb | flo: Update fingerprints to MOB30D
+77e6e51 APN: fixup single-digit mnc APNs
+
+   * vendor/cmsdk/
+fc30924 livedisplay: Fix endless loop for devices that don't support outdoor mode.
+ff22a76 livedisplay: Fix bad state after bootup
+6771fc8 livedisplay: Don't explode if no modes are available
+4ac46cf livedisplay: Publish our own damn tile!
+19a340c livedisplay: Fix error checks when fetching config
+73f16e7 Fix LiveDisplay string
+3a7f98d cmsdk: Exclude compiled 'cyanogenmod/library' java package.
+
+====================
+     04-14-2016
+====================
+
+
+   * bionic/
+98ea086 bionic: Teach fnmatch(3) to handle UTF-8 characters in patterns
+
+   * build/
+e5967b4 build: Add BOOTIMAGE_EXTRA_DEPS for BOOT_SIGNER products too
+d865b90 build: Use compatibility DTB directory path for custom DTB tool builds
+
+   * external/DUtils/
+0a9e12d [1/3] Fling: Up swipe left/right support
+
+   * external/toybox/
+3b06b02 Merge branch 'master' of https://android.googlesource.com/platform/external/toybox into cm-13.0
+d5de717 toybox: find: Fix segfault when using -iname/-ipath with -exec
+
+   * external/uicommon/
+70656f2 Make UICommon Snackbar attribute not conflict with appcompat
+
+   * frameworks/av/
+5153cdc libmedia: Initialize mState/mActive value to avoid possible crash
+20f0782 stagefright: Fix CLANG compilation for AMR decoder
+4882796 nuplayer: Seek to valid position in setVideoSurface
+51b3174 video: Use boot clock for recording start time
+7262eae nuplayer: ignore openAudioSink while waiting for teardown completion
+3fe0fe6 nuplayer: update anchor time for offload usecase
+d27aa05 frameworks/av: Fix LOG_NDEBUG compilation issues
+8a69897 libavextensions: Add LOG_NDEBUG define
+f888ced libstagefright: handle error when B-frame is sent to MPEG4Writer
+0ecd6fb cameraservice: Run HAL3 in Non ZSL mode
+0d34354 audio: QTI resampler supports for 32 bit input format
+02d9acd nuplayer: Reverting GenericSource changes done for STA integration
+9fd0a69 rtsp: keep video damaged access unit to enhance fault tolerance
+322d0a4 libstagefright: Allow for MPEG4Writer extension
+d38f175 audioflinger: Compile 192k resampler for 32 bit environment
+804eeff Update Instrumentation code
+135352e NuPlayer: extend onResume funtion
+
+   * frameworks/base/
+c9dc120 Race in WapPushManager under multi-thread environment
+6a94bde packagemanager: Fix bootloop if packages.xml is deleted
+09ce856 Themes: Restore original value if getValue fails
+5a800de Check for deprecated third party keyguard perm
+
+   * packages/apps/AicpExtras/
+2c92dc0 REVERT: DT2S on navbar
+e3016ed AE: fix landscape layout on color picker
+9c985a3 Color picker enable alpha slider as default
+
+   * packages/apps/Bluetooth/
+f64343e hdp: do not return a null value when hdp interface unavailable
+
+   * packages/apps/DUI/
+b79eafc [2/3] Fling: Up swipe left/right support
+
+   * packages/apps/Dialer/
+2fd9cfd Remove superfluous method parameter.
+de80d99 InCallMetrics: null check our content resolver query
+d0a5c69 Dialer: Customize features for regional package
+
+   * packages/apps/InCallUI/
+b2f9e4a InCallUI: add LookupProvider and VoLTE to landscape layout
+
+   * packages/apps/Messaging/
+369448c Improve priority string
+
+   * packages/apps/OmniSwitch/
+bc1a597 OmniSwitch: update 04/2016
+
+   * packages/apps/Settings/
+27dd377 Javacrash when long press the SSID of connected AP in WiFi list
+ba4624f Display connect button in the wifi connection menu
+a6a26e7 Fix NPE when rotating "Saved networks" screen
+dfd3f17 [3/3] Fling: Up swipe left/right support
+ca55fb0 SpamList: Set correct color & remove text from notifications menu item
+
+   * packages/apps/SetupWizard/
+b263557 Update the theme apply label string
+
+   * packages/apps/Snap/
+57799db Snap: Improve focusing
+
+   * packages/apps/Trebuchet/
+95d1934 avoid NPE
+5e5f825 Trebuchet: Don't crash when AppWidgetService is unavailable
+
+   * packages/providers/ContactsProvider/
+a629c55 ContactsProvider: Fix polyphones in Chinese.
+
+   * system/extras/su/
+d2c8eb2 su: Fix crash due to invalid file descriptor
+
+   * vendor/cmsdk/
+9c9bd9b ExtViews: Pass input events to underlying Window
+b45939d cmsdk: correct naming of THIRD_PARTY_KEYGUARD perm
+
+====================
+     04-13-2016
+====================
+
+
+   * frameworks/base/
+e836286 Merge "livedisplay: Moving LiveDisplay to CMSDK" into mm6.0
+6a93014 livedisplay: Moving LiveDisplay to CMSDK
+75ea3e7 Merge "Add check whether wallpaper's size has changed" into mm6.0
+823a34b9 GlobalActions: Always use setZenMode
+84d1f0e SysUI: Deprecate collapseNotificationPanel [2/2]
+d83bf75 SystemUI: fix double tap power launching custom lockscreen icon
+5aa2618 SystemUI: remove extraneous debug log
+
+   * frameworks/native/
+2b4df0b surfaceflinger: Add support for secondary color matrix
+
+   * hardware/cyanogen/
+df9286e cmhw: Add support for GPU-based color calibration
+
+   * packages/apps/CarrierConfig/
+426a0d0 Telefonica MMS Max sending limit files Added
+
+   * packages/apps/ContactsCommon/
+d4b8508 Remove duplicate ambientsdk reference
+
+   * packages/apps/InCallUI/
+06ed7b3 Missed rebase: add coordinator layout
+6e116e1 Change in InCallAPI handover button UI
+
+   * packages/apps/Settings/
+79a3afc livedisplay: Update Settings for new LiveDisplay API
+a14b28e Merge "AICP French Translations (update) : packages_apps_Settings" into mm6.0
+
+   * packages/services/Telephony/
+4ec11c1 telephony: Handle no valid subscription scenario for MNS.
+
+   * system/extras/
+7a66a32 f2fs_utils: Update for f2fs-tools 1.6.1
+0aef861 f2fs_utils: Alloc f2fs_journal
+
+   * vendor/aicp/
+c4a6044 cm: Moving LiveDisplay to CMSDK
+472402e SMART [PH] APN updates
+d99416d cm: Support maven artifact as aar for publish.
+0f57216 shamu: Update fingerprint to MOB30D
+
+   * vendor/cmsdk/
+268a6b9 cmsdk: Refactoring LiveDisplay
+fdccaf0 cmsdk: compile as aar
+f4cb8cb Themes: Clear out bootanimation if pkgName empty
+b227130 LLS: Deprecate collapseNotificationPanel [1/2]
+
+====================
+     04-12-2016
+====================
+
+
+   * build/
+27e2fb5 build: Add MTK support
+
+   * frameworks/base/
+0f0ff42 Add check whether wallpaper's size has changed
+1a11f5d Incorrect evictor key in TokenCache
+79b6ee4 SystemUI: add closed all tasks event log
+f3eab3e SystemUI: add RecentsView EventLogs
+2adbeb6 SysUI: reset mCanDismissKeyguard in setBarState
+
+   * packages/apps/AicpExtras/
+8d148e7 AE: initial Italian translations
+
+   * packages/apps/Calendar/
+1dbb27e Fix alerts in doze mode
+
+   * packages/apps/CarrierConfig/
+98e6fca Enable enabledNotifyWapMMSC for Telefonica Europe carriers
+
+   * packages/apps/ContactsCommon/
+7ff2d1e Add 'ims-common' & 'info_lookup' build dependency
+9590c56 Remove scaling option for the Front drawable in CheckableFlipDrawable
+
+   * packages/apps/Messaging/
+d29cf54 Revert "added enabledNotifyWapMMSC flag to mms_config.xml"
+06c4913 Added new feature MMS Validity Period, MMS Delivery,Read Report and MMS Sending Report
+
+   * packages/apps/PhoneCommon/
+63c90d0 Only fire visibility change callback if visibility actually changed.
+5c9ce9b Remove unneeded source line
+
+   * packages/apps/Settings/
+f75cfa7 Fix the improper string and increment database version to kick off a new indexing job.
+6813501 Settings: fix default sim radio selections
+308fe01 AICP French Translations (update) : packages_apps_Settings
+
+   * packages/apps/Snap/
+a78d012 SnapdragonCamera: Fix crash issue when changing TNR setting
+
+   * packages/services/Telephony/
+8b2df62 Telephony: Fix NPEs
+
+   * system/core/
+8725f52 Revert "Revert "init: Temporarily increase coldboot timeout to 5s""
+fd12c34 fs_mgr: Add an optional libfs_mgr shared library
+b4c3a88 liblog: Add xlog symbols on MTK hardware
+
+   * system/extras/
+0c8a8e1 Revert "f2fs_utils: Update for f2fs-tools 1.6.1"
+
+====================
+     04-11-2016
+====================
+
+
+   * frameworks/av/
+6635a58 omx: softcodecs: Support HAL_PIXEL_FORMAT_RGBX_8888
+baf93ea CameraClient: MTK Support
+
+   * packages/apps/AudioFX/
+985c5b0 AudioFX: Fix FC when opening the app
+853e7fb Merge "Rename package back to AudioFX" into cm-13.0
+
+   * packages/apps/Eleven/
+5b70660 Eleven: Use appropriate String value comparison
+cf215ef Eleven: Remove unnecessary local variables
+
+   * packages/apps/Nfc/
+f7d27d5 Fix Nfc sound mode setting to default value after reboot
+
+   * packages/apps/Settings/
+e79908d Fix up NFC soud mode logic a little
+43f2022 settings: Allow adding a shortcut icon for carrier selection
+
+   * packages/services/Telephony/
+313d1d9 Don't impose limitations on network mode selection for non-multi RAT phones.
+
+====================
+     04-10-2016
+====================
+
+
+   * external/jpeg/
+60a4dc2 porting jpeg_mem_src() from jpeg lib v8c
+
+   * frameworks/base/
+de6611e fwb: SystemUI: Updated DE translations by Rallf Luther
+56ceefd Fix MTP_TYPE_UINT128 data conversion issue
+9d62742 Fix for reboot due to Volume State not updated in callback
+
+   * packages/apps/AicpExtras/
+6eeb1b6 Merge "AE: Updated DE translations by Ralf Luther" into mm6.0
+e420f3d Start AE regardless of having root or not
+6daa3fe AE: Updated DE translations by Ralf Luther
+
+   * packages/apps/Dialer/
+c26a0ad Workaround for AOSP strings missing translations
+
+   * packages/apps/Settings/
+5bcb6e4 settings: Updated DE translations by Ralf Luther
+
+   * vendor/aicp/
+7718370 Fix su and other stuff after removing Microbs patch
+
+====================
+     04-09-2016
+====================
+
+
+   * frameworks/base/
+10ee3cb media: Add flags, channelMask, and UID to audio session callbacks
+213e0e8 fwb: SystemUI: Updated RU translations by Sergey Samsonenko
+
+   * frameworks/opt/telephony/
+842c9d5 Convert multi_rat_capable property into an old RIL feature.
+
+   * hardware/qcom/audio-caf/msm8974/
+844647b hal: Add support for AUDIO_DEVICE_OUT_LINE
+
+   * hardware/qcom/bt-caf/
+dec5d09 Merge branch 'LA.BF.1.1.3_rb1.12' of git://codeaurora.org/platform/hardware/qcom/bt into cm-13.0
+
+   * packages/apps/AudioFX/
+1589b3f Rename package back to AudioFX
+846d5ed audiofx: Add support for line-out path
+e4e3997 audiofx: Don't link with android-visualizer
+c227786 audiofx-oss: Use new callback API
+
+   * packages/apps/Bluetooth/
+efb1d74 Merge branch 'LA.BF.1.1.3_rb1.12' of git://codeaurora.org/platform/packages/apps/Bluetooth into cm-13.0
+
+   * packages/apps/Contacts/
+5201b4b Add null object check
+7de12b0 Add 'ims-common' build dependency
+
+   * packages/apps/ContactsCommon/
+0a27115 Really change the ambient version
+9d3da7d Change ambient version
+
+   * packages/apps/DUI/
+69b8375 DUI: updated RU translations by Sergey Samsonenko
+
+   * packages/apps/Dialer/
+03b901c Dialer: give smart options their own header
+9063092 [2/2] Dialer: SmartMute
+0a5abcd Fix rebase errors
+795f46c Port VoLTE support from DialerNext into AOSP Dialer
+153585f Add new method for getting hinttext
+90ae36a Call Log - fix issues with expanded call log options
+c9aa85c Only clear dialpad on success
+9c490ff Check for phone permissions before gathering call history
+d1684bf Metrics: Fix some bugs found by testing
+dc65a3c Fix 'turn on phone permissions' hint
+56d8996 Remove FAB hiding and showing
+baf30ce Update search drawable when dialpad is hidden
+61583e1 Fix expanded call options for InCallApi provider
+d8f7228 Add Metrics for Dialer call origins and incall items
+aff8cf3 Update roaming text
+2902377 Add Wifi Call nudge
+7ae75d5 Temporarily revert DeepLink
+b338120 Add RequestOrigin to ContactInfoHelper
+86f1f7b Add metrics for logging a successful LookupProvider response
+6a89808 Utilize status codes on LookupResponse
+36df0be Add BlockContactActivity to the manifest
+3eb91f5 Bring coachmark up to spec
+94ea6cc Use CALL_ACTION instead of InCallAPI for emergency calls
+58f0d08 Construct encoded lookup uris for Lookup responses
+d9623d5 Modify BlockContactPresenter
+fae836f [2/2] MultiSIM: Call using specified SIM
+c0553ca Refactor Blacklist and Contact Blocking
+666fc39 Wi-fi help text does not show first time when SIM is selected
+93f9bb5 Use BrandIcon instead of BadgeIcon
+3d05339 InCall plugin search shortcut text fix
+625ad12 Only show enabled CallMethods
+80cc555 Move adapter updating into updateCallCreditInfo
+bcbe31f Create new drawable before we scale
+86d7d78 Fix crash where overflow does not exist
+dde67a8 Fix coachmark rotation and text size
+cd91ec8 Add null check to query string
+cf41dae Add back missing icon in portrait mode
+8803300 Fix text in call log to match specs
+848c314 Show credit banner if supported in dialpad and search ui
+ee66a85 getCurrentCallMethod if it is currently null
+4326931 Port coachmark to DialerNow
+c0b01af Remove sign_in_credit_banner_text, this should live in PhoneCommon
+21ce88f Fix CallMethodHelper change
+4d9d892 Use correct placeCall method
+4dfef33 Fix InCall plugin user lookup
+1ac2c1d Finally fix our search to behave as expected
+3ac55cf Fix race with credit listener removal
+cd9060a Fix NPE rotation issue
+a0cae1a [1/2] Use UICommon simple SnackBar
+669a60e Fix refreshing if data is already available
+69dfa2b Properly size icon for provider quickaction
+83efea2 Start using android support design from frameworks
+f803f18 Move pause/resume logic from regular search to main fragment
+d96febd Decouple getAllCallMethods from refreshing
+fbe23b1 Hide t9 dialpad overflow menu when incall plugin selected
+24e0a61 [2/2] fix spinner/hint issues
+8bb7a41 [1/2] Update credits banner style
+88b1d19 Fix fab position when not in searchUI
+c2ec82f Fix CallLogDetails for InCall Plugins
+e2c76a9 DialerDatabaseHelper: Don't update last updated time on execute
+9ec8fdd Fixes a misalignment between the DeepLink icon in Call History.
+cff1831 Refine criteria that triggers LookupProvider search
+aed3d6c Fix block status refresh issue in call log entries
+f5e6962 Amend contact blocking UI
+ee37b4b Fix roaming hint text
+b653e06 Add null check to text listener
+04e24ee Refactors the CallLog code to follow proper design patterns, fixes a number of bugs related to callback mechanisms.
+0f8ff3f Consolidate global credits bar
+73d13e9 Force PSTN from quickactions
+fd4ce2b fix import
+c28a908 Fix mimetype query
+ccb0ea8 Fix multiple issues with regular search credits bar
+19a3ef0 InCall: update CreditBarHelper imports
+e7fcd23 Add Credits Bar in Regular search
+f788030 Fix multiple search issues
+a90a86a Fix layout issues with hint texts
+3de0820 Uses the new alreadyHasContent boolean to determine whether to show icons
+e54c2e0 Add LookupProvider to the call log
+2cd23bd DeepLink refactors and bug fixes.
+a5a41ae Fix a two issues with DialerDatabase
+718852f Fix derp in labeling that breaks messaging
+e917f5c (1/2) T9 fixes and quickactions
+ffdc00e Hide 'send message' in call log for providers
+5c56a65 Add CallerInfoProvider options in Settings
+acb0f2e Hide block calls for providers
+102468f Dialer DeepLink Integration Phase 1
+4db74d3 Fix crashes from permissions errors
+2b383db Fix ANR when no providers are available
+584557f Fix PSTN calls from search
+16af95a Remove extra callMethodListener update
+3da7a2e Fix rebase issue
+0cc800d Fix CallDetails Activity from calllog
+4d037cb Fix credits and cut down on extra work
+9155ee2 Update spinners to reflect plugin enabled status
+3f2d727 Pass mimetype to adapter for regular search
+4111e1a Fix potential crash with dialpad not being attached
+0b9b934 Fix Dialer crash when selecting call details
+02d09b2 Don't try to show InCall Plugin based hints if no plugins are available
+260d8d9 [2/2] Use provider string instead of user name
+737c3ac Add null check to emptyview setup
+79d8b33 Fix hint text logic to be correct
+2386114 Create spinner in search and port auth credits bar
+7038fa4 Fix attribution badge bug
+5b3defa (2/2) Call Lookup: Update call log handler to process usernames
+d4e023a Bring click code out of common
+c267285 Fix hint text in landscape
+84522fd Update SIM's when necessary
+32c77e3 InCall: Port Authentication and CallCredit Listeners
+933af05 Show Emergency Call action in method spinner
+b0e4394 InCall: port nudges and fix plugin settings
+8312e55 Cleanup and Spinner update fix
+bed499a Fix speeddial rotate issue
+89368cb Initial T9 search bringup
+07defe6 Incorporate namespace changes for PluginStatus
+5955744 Libraries needed for InCallUI
+b9516de Fix a number of issues
+3fca833 Move CallMethod items to PhoneCommon
+ed6e921 Initial import of credits bar
+18fa2d2 Add InCall Settings
+03414c9 Initial Bringup of InCall Call Log modifications
+0e7b096 Bringup Favorites and CallMethodSpinner
+e9f88c4 Initial Bringup of Ambient and InCall for M
+
+   * packages/apps/ExactCalculator/
+a804631 ExactCalculator: Remove override of Calculator package
+
+   * packages/apps/InCallUI/
+a9e4e1b InCallUI: Add a controller for proximity sensor
+2a62e87 InCallUI: clean up prox speaker code and improve usability
+83b61d7 [3/3] InCallUI: Proximity speaker
+e267b9c InCallUI: let InCallUI handle proximity sensor for incoming calls
+3a4c1f7 [1/2] InCallUI: SmartMute
+7ae53c9 Port VoLTE support from InCallUINext to InCallUI
+25cd7bf Temporarily revert DeepLink
+a5eb044 Add RequestOrigin to ContactInfoCache
+d57745b Add additional content to call Notifications
+ea294b5 Ensure presence of a valid Call in LookupProvider callback
+070ba75 Implement ability to add incoming call to Blacklist within Glow ring
+d4812c8 Adjust end call fab relative to invite snackbar
+c05de72 Resolves a few issues related to call buttons:  The DeepLink slot will now update after sending a link to be handled. onResume() will now start a new query.  This gives the handling application an opportunity to trigger a "view" action instead of receiving the content as if it were new.
+61d7ca7 Only get our enabled call methods
+9a7a617 Add LookupProvider to ContactInfoCache
+
+   * packages/apps/Messaging/
+49f0c07 Add 'ims-common' build dependency
+
+   * packages/apps/PhoneCommon/
+cf732b7 Move VoLTE changes to PhoneCommon
+ade2cdf Add new method for getting hinttext
+5bbda91 Use subscription check
+b36eab1 Only clear dialpad on success
+7823a59 InCall: add low credit warnings
+18a593c Fix equals and hashcode override
+64949d3 Remove resources instance saved in CallMethodInfo
+89e5527 [1/2]Contacts : handle soft logged out state
+27e78ce Prioritize credits over subscriptions.
+a7c8e41 Contacts Card : fixed install nudge
+f55b2d2 Fix FC on devices without AmbientCore
+4a49180 [1/2] MultiSIM: Call using specified SIM
+f8e338e Use BrandIcon instead of BadgeIcon
+5176f88 Add preference to track wifi call events
+df5cb68 (1/2) Contacts: fixed auth state handling
+ee5263f Add comments for the expected drawable attributes
+e32e50e Add back badgeicon after refactor
+8d0e05b Add sign_in_credit_banner_text
+fbada9d (1/2) Contacts: refactor
+86b7461 InCall: check class of creditWarn value
+70b3f14 Decouple getAllCallMethods from refreshing
+503b9dc [1/2] fix spinner/hint issues
+0cd7e34 [2/2] update credit colors
+30dc785 Fix crash with null mimetype
+a1aefab InCall: move CreditBarHelper to src-ambient
+95562ec Move Credits Bar to Helper class
+e920421 Reintroduce dynamic refresh
+846ec78 Helper methods for our t9 searches
+5531533 Fix Subscription button text
+5675262 Remove everchanging items
+02d4b70 Create easy method to just grab enabled plugins
+f0aa770 Fix emergency call crash
+7c94eb8 Use new subscription format
+ec3dbfa Fix call method spinner width and selection area
+96733b9 Add Login intent for credits bar
+57e3b00 setOverflowMenuButton custom button placement
+fc97e72 InCall: Port Authentication and CallCredit Listeners
+7f660d9 Various CallMethodInfo tweaks
+969c8f4 InCall: clean up logs and add ImageUtils
+22fef9c CallMethodHelper/Info: Add icon and mimetype
+3d48977 Incorporate namespace changes for PluginStatus
+a6049e6 Bring CallMethod items here
+c5f5b11 Bringup credits and other minor things
+77d3091 Call Method Spinner Bringup
+
+   * packages/apps/Settings/
+e34fe61 settings: Updated RU translations by Sergey Samsonenko
+
+   * packages/providers/ContactsProvider/
+b3bdb84 Switch to ambientsdk
+
+   * vendor/aicp/
+9744fb9 Update ambientsdk version 1.5.2
+
+   * vendor/cmsdk/
+4b1e40d LLS: Fix (possible) NPE
+
+====================
+     04-08-2016
+====================
+
+
+   * frameworks/av/
+a412380 audiopolicy: Be a little smarter with auto-attach
+
+   * frameworks/base/
+a1b5cdc Merge "Frameworks_base: add dt2w on doze [2/2]" into mm6.0
+bdfa39c Merge "Force Heads up in all applications [1/2]" into mm6.0
+b962a55 SysUI: Add event logs for live lock screen interactions
+b4f1386 Frameworks_base: add dt2w on doze [2/2]
+86a3c70 Force Heads up in all applications [1/2]
+eaf07c4 Lockscreen target fixes
+26ceaf6 Don't recreate 3MinitController
+06d4b71 Revert "Revert "Statusbar: Gracefully adapt 3Minit Battery hook for AOSP""
+b459010 Revert "Revert "Add 3Minit battery mod""
+1cba130 Merge "Fix typo in RankingHelper." into mm6.0
+45d8298 Merge "Revert "Revert "QS: Add App SideBar Tile [1/2]""" into mm6.0
+2b68fdc Merge "Revert "Revert "App Sidebar Fixup""" into mm6.0
+ff8abfd Merge "Revert "Revert "FW_Base - App sidebar (1/2)""" into mm6.0
+a5b7040 Fix typo in RankingHelper.
+222a426 Merge "SettingsProvider: fix build for volume adjust sound to be overlayed" into mm6.0
+c8e967d Merge "SettingsProvider: Allow default volume adjust sound to be overlayed." into mm6.0
+b275139 Merge "com.android.cts.appsecurity.AdoptableHostTest may trigger below dead lock in system_server in the board with external adoptable storage as below stack:" into mm6.0
+78fe83a SystemUI: Fix Statusbar Clock Color not sticking
+fb77e4fc5 Merge "Revert "Revert "Revert "Fix clock color inverted statusbar mod"""" into mm6.0
+42f48f0 Revert "Revert "Revert "Fix clock color inverted statusbar mod"""
+40c46a4 Merge "Revert "Revert "Fix clock color inverted statusbar mod""" into mm6.0
+f7e81c3 Revert "Revert "Fix clock color inverted statusbar mod""
+70c60ba SettingsProvider: fix build for volume adjust sound to be overlayed
+49154fa SettingsProvider: Allow default volume adjust sound to be overlayed.
+e236d86 com.android.cts.appsecurity.AdoptableHostTest may trigger below dead lock in system_server in the board with external adoptable storage as below stack:
+ff34080 Revert "Revert "QS: Add App SideBar Tile [1/2]""
+04ad7e9 Revert "Revert "App Sidebar Fixup""
+
+   * frameworks/opt/telephony/
+ea619d1 telephony: Improve compatibility for older DSDS stacks
+
+   * packages/apps/AicpExtras/
+d15808e AE: Add prebuilt AdAway (1/2)
+81392c2 Revert "Revert "AE - App sidebar (2/2)""
+
+   * packages/apps/Contacts/
+da1af0b Contacts: fixed ConcurrentModificationException
+f17e2d0 Fix: update ambiguous placeCall method
+82bc10e Contacts Card: nudge subtitle adjustment
+f2a6c4d Contacts: show InCall plugin tab FAB in soft logged out state
+b5073fd Contacts: added stats settings check
+53a12b4 Contacts: metrics
+b0b05c8 Contacts : ViewPager RTL fix
+6452c8e [2/2]Contacts: handle soft logged out state
+33306c4 Contacts: fixed contacts filter exception
+a32f6a3 Contacts Card: fixed merged contacts with multiple plugin accounts
+dbdb27d Contacts Card: fix nudges
+64e5ffe Contacts: add plugin status change receiver
+4bfb173 Adapt to the API changes in contact blocking classes
+00120c2 (2/2) Contacts: fixed auth state handling and account handle
+4f95d89 Contacts Card: fixed plugin call log
+e73c017 Contacts: added fix for parcelable
+42fed27 Fix build breakage in QuickContactActivity
+a7f0f11 Contacts: incall plugin implementation
+
+   * packages/apps/ContactsCommon/
+fca7d21 Automatic translation import
+90b9d42 Automatic translation import
+3ac79f5 Contacts : fix RTL ViewPager offset on configuration change
+
+   * packages/apps/InCallUI/
+407efb4 Resolves a NPE when the UI isn't available at the time of the callback ticket NOTES-16
+fef1a35 Tints the DeepLink icons loaded into the callbuttonfragment to keep the look and feel consistent
+4121225 Fix incall button ordering
+a72e4cb DeepLink Refactors for CallButtonPresenter and CallButtonFragment
+ea458a1 DeepLink integration phase 1
+ff82047 Use CallMethodHelper for plugin info
+91d03c8 InCallAPI Handover M-bringup
+d69ce6c Port call transfer feature from DialerNext to AOSP Dialer
+
+   * packages/apps/Settings/
+9384609 Settings: add dt2w on doze [1/2]
+2ad746e Force Heads up in all applications [2/2]
+a020f94 Merge "Add explanation for customizing apps" into mm6.0
+f10e169 Add explanation for customizing apps
+351ecbf Merge "Fix small typo in manifest" into mm6.0
+214972b Fix small typo in manifest
+6d43910 Merge "settings: Updated RU translations" into mm6.0
+a8854f2 Settings: use ActivityManager method for requesting bug report
+9b1ef2a Settings: Disable and hide refresh button on power usage detail.
+
+   * packages/apps/Trebuchet/
+b607527 Trebuchet: add gello to hotseat
+
+   * packages/providers/ContactsProvider/
+132b7de Contacts: automatic merge count metrics
+e2b52e9 Switch to ambientsdk-internal
+2cb7161 Bump targetSdkVersion to 23
+f29be69 Get mimetype for strequestns
+d77430b AmbientSDK: set new target SDK to 22
+2de130b Fix query if no username exists in path
+d6942db ContactsProvider: Join raw_contacts and data on the proper ID
+22eeaf5 (1/2) Call Lookup: Update call log handler to query usernames
+b25f375 [1/3] Show incall plugin contacts in favorites
+48f6d92 Update addresBookIndexer when removing dupes
+f987131 New uri path for removing duplicate callable contacts
+58956e1 CallLog: change plugin to package
+3e6a328 CallLog: initial adding of new plugin columns
+01c7baf Query skype mime type when getting CALLABLE contacts
+
+   * system/bt/
+881f723 Merge branch 'LA.BF.1.1.3_rb1.12' of git://codeaurora.org/platform/system/bt into cm-13.0
+
+   * vendor/aicp/
+1a89a5c Merge "hammerhead/caf: update fingerprints to MMB29X" into mm6.0
+344fd70 vendor: Add back prebuilt AdAway (2/2)
+0ca5be2 hammerhead/caf: update fingerprints to MMB29X
+61a9f90 Merge "Don't Build Microbes Live Wallpaper Anymore" into mm6.0
+55ae469 shamu: Update fingerprint to MMB29X
+
+   * vendor/cmsdk/
+9cd6610 Merge "Revert "Revert "cmsdk: Add App SideBar Tile [2/2]""" into mm6.0
+323bcba cmsdk: Actually return the system property in Build.
+7bb3f74 Revert "Revert "cmsdk: Add App SideBar Tile [2/2]""
+
+====================
+     04-07-2016
+====================
+
+
+   * device/qcom/common/
+eed780b qcom: power: Allow devices to write their own platform specific bits
+
+   * frameworks/base/
+9bd5d49 Revert "Revert "FW_Base - App sidebar (1/2)""
+9f1c149 Merge "Revert "Fix clock color inverted statusbar mod"" into mm6.0
+ebe019f Revert "Fix clock color inverted statusbar mod"
+
+   * packages/apps/AicpExtras/
+ee4b702 AE: initial Spanish translations
+
+   * packages/apps/Settings/
+18d13f3 settings: Updated RU translations
+
+   * vendor/aicp/
+726228e bullhead: update teh maintainer
+d815d33 bullhead: update teh fingerprints
